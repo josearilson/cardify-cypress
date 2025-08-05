@@ -77,7 +77,7 @@ describe('<AddCard />', () => {
 
     cy.fillCardForm({ ...myCard, holderName: 'J' })      
     cy.submitCardForm()
-    cy.alertErrorHaveText('Nome deve ter pelo menos 2 caracteres')
+    cy.alertErrorHaveText('Nome deve ter pelo menos 2 digitos')
 
   })
 
