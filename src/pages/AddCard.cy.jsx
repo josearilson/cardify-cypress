@@ -2,11 +2,9 @@ import React from 'react'
 import AddCard from './AddCard'
 
 
-Cypress.Commands.add('alertErrorHaveText', (expectdText) => {
-
-  cy.contains('.alert-error', expectdText)
+Cypress.Commands.add('alertErrorHaveText', (expectedText) => {
+  cy.contains('.alert-error', expectedText)
     .should('be.visible')
-
 })
 
 
@@ -71,7 +69,7 @@ describe('<AddCard />', () => {
     
     cy.get('.notice-success')
     .should('be.visible')
-    Annoyed('have.text','Cartão cadastrado')
+    .and('have.text','Cartão cadastrado com sucesso!')
 
   })
 
