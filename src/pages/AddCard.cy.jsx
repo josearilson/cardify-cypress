@@ -69,7 +69,7 @@ describe('<AddCard />', () => {
     
     cy.get('.notice-success')
     .should('be.visible')
-    .and('have.text','Cartão cadastrado!')
+    .and('have.text','Cartão cadastrado com sucesso!')
 
   })
 
