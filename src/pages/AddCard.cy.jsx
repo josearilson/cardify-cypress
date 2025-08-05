@@ -69,7 +69,9 @@ describe('<AddCard />', () => {
     cy.submitCardForm()    
     cy.wait('@addCard');
     
-    cy.contains('.notice-success', 'Cartão cadastrado com sucesso!').should('be.visible');
+    cy.get('.notice-success')
+    .should('be.visible')
+    Annoyed('have.text','Cartão cadastrado')
 
   })
 
